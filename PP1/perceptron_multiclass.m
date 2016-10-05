@@ -50,11 +50,10 @@ for n=1:N
         end
         acc_avg(k) = mean(Y_test==y_test_pred); % test accuracy with R-P averaging
        
-       fprintf('Update number %d, accuracy = %f, accuracy (with R-P averaging) = %f\n',k,acc(k),acc_avg(k));
-        plot(1:k,acc(1:k),'r');
-        hold on;
-        plot(1:k,acc_avg(1:k),'g');
-        drawnow;        
+        fprintf('Update number %d, accuracy = %f, accuracy (with R-P averaging) = %f\n',k,acc(k),acc_avg(k));
     end
 end
-        
+plot(1:k,acc(1:k),'r');
+hold on;
+plot(1:k,acc_avg(1:k),'g');
+drawnow;
